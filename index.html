@@ -143,7 +143,7 @@
     <section id="catalogue">
       <div class="container">
         <div class="row text-center mt-3">
-          <div class="col md-3">
+          <div class="col  md-3">
             <h2><a href="https://www.instagram.com/akart_creative/" class="text-dark">Catalogue</a></h2>
           </div>
           <div class="row">
@@ -151,7 +151,12 @@
           </div>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#7e7e7e" fill-opacity="1" d="M0,256L48,261.3C96,267,192,277,288,250.7C384,224,480,160,576,149.3C672,139,768,181,864,192C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path 
+        fill="#7e7e7e" 
+        fill-opacity="1" 
+        d="M0,256L48,261.3C96,267,192,277,288,250.7C384,224,480,160,576,149.3C672,139,768,181,864,192C960,203,1056,181,1152,176C1248,171,1344,181,1392,186.7L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
       </svg>
     </section>
     <!-- End of Catalogue -->
@@ -166,20 +171,47 @@
           <div class="row justify-content-center">
             <div class="col-md-8">
               <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <div class="login">
+                  <form action="#" method="POST" onSubmit="validasi()">
+                    <div>
+                      <label>Nama Lengkap:</label>
+                      <input type="text" name="nama" id="nama" />
+                    </div>
+                    <div>
+                      <label>Email:</label>
+                      <input type="email" name="email" id="email" />
+                    </div>
+                    <div>
+                      <label>Alamat:</label>
+                      <textarea cols="40" rows="5" name="pesan" id="pesan"></textarea>
+                    </div>
+                    <div>
+                      <input type="submit" value="Submit" class="tombol">
+                    </div>
+                  </form>
                 </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="email" />
-                </div>
-                <div class="mb-3">
-                  <label for="pesan" class="form-label">Pesan</label>
-                  <textarea class="form-control" id="pesan1" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <script type="text/javascript">
+                  function validasi() {
+                    var nama = document.getElementById("nama").value;
+                    var email = document.getElementById("email").value;
+                    var pesan = document.getElementById("pesan").value;
+                    if (nama != "" && email!="" && pesan !="") {
+                      return true;
+                    }else{
+                      alert('Anda harus mengisi data dengan lengkap !');
+                    }
+                  }
+                </script>
               </form>
+                <div>
+                  <div style="left:auto;bottom:auto;"
+                  <a class="text-black-50">Atau Bisa Melalui</a>
+                  </div>
+                <div style="left:20px;bottom:20px;">
+                  <a href="https://api.whatsapp.com/send?phone=+6282386731352&text=Halo">
+                  <button style="background:#32C03C;vertical-align:center;height:36px;border-radius:5px">
+                  <img src="https://web.whatsapp.com/img/favicon/1x/favicon.png"> Whatsapp </button></a>
+                </div>
             </div>
           </div>
         </div>
